@@ -16,6 +16,8 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
+    if (message.text[0] != '!') and (message.chat.type == 'supergroup'):
+        return
     client = wolframalpha.Client('7HXRW2-X5A2AXYYPY')
     res = client.query(message.text)
     try:
