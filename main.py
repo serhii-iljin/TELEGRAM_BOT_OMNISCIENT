@@ -18,7 +18,7 @@ def start_message(message):
 def send_text(message):
     if (message.text[0] != '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
         return
-    if (message.text[0] == '!') and not((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
+    if (message.text[0] == '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
         q = message.text[1:]
     else:
         q = message.text
