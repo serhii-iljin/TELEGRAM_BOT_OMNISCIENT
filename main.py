@@ -4,11 +4,11 @@ bot = telebot.TeleBot('1930969642:AAEH0CC-EYezvPVOvuM45OEg4_L8Wjproxo')
 
 @bot.message_handler(commands=['help'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Just type your question in, come on!\nIf you use this bot in group just type \"!\" before your question.\nOther commands: /help, /start, /contacts.')
+    bot.send_message(message.chat.id, 'Just type your question in, come on!\nIf you use this bot in group just type \"!\" before your question.\nAll commands: /help, /start, /contacts.')
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'This bot can answer every your question!\nOther commands: /help, /start, /contacts.')
+    bot.send_message(message.chat.id, 'This bot can answer every your question!\nAll commands: /help, /start, /contacts.')
 
 @bot.message_handler(commands=['contacts'])
 def start_message(message):
