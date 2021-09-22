@@ -12,7 +12,7 @@ def start_message(message):
 
 @bot.message_handler(commands=['contacts'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Telegram: @serhii_iljin, GitHub: https://github.com/serhii-iljin, LinkedIn: https://www.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D1%96%D0%B9-%D1%96%D0%BB%D1%8C%D1%97%D0%BD-aaaa3b219/')
+    bot.send_message(message.chat.id, 'Developer:\n-Telegram: @serhii_iljin;\n-GitHub: https://github.com/serhii-iljin,\n-LinkedIn: https://www.linkedin.com/in/%D1%81%D0%B5%D1%80%D0%B3%D1%96%D0%B9-%D1%96%D0%BB%D1%8C%D1%97%D0%BD-aaaa3b219/\nLogo designed by @Andrii_e_o.')
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
