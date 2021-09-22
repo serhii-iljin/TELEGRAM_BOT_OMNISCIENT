@@ -16,7 +16,7 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-    bot.send_message(message.text[0])
+    bot.send_message(message.chat.id, message.text[0])
     if (message.text[0] != '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
         return
     if (message.text[0] == '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
