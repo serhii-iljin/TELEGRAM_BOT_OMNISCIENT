@@ -4,7 +4,7 @@ bot = telebot.TeleBot('1930969642:AAEH0CC-EYezvPVOvuM45OEg4_L8Wjproxo')
 
 @bot.message_handler(commands=['help'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'TJust type your question in, come on!\nIf you use this bot in group just type \"!\" before your question.\nOther commands: /help, /start, /contacts.')
+    bot.send_message(message.chat.id, 'Just type your question in, come on!\nIf you use this bot in group just type \"!\" before your question.\nOther commands: /help, /start, /contacts.')
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
@@ -17,6 +17,7 @@ def start_message(message):
 @bot.message_handler(content_types=['text'])
 def send_text(message):
     if (message.text[0] != '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
+        bot.send_message(message.chat.type)
         return
     if (message.text[0] == '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
         q = message.text[1:]
