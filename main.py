@@ -16,12 +16,14 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
+    #Determine bot behaviour depending on chat type
     if (message.text[0] != '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
         return
     if (message.text[0] == '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
         q = message.text[1:]
     else:
         q = message.text
+    #Getting answer
     client = wolframalpha.Client('7HXRW2-X5A2AXYYPY')
     res = client.query(q)
     try:
