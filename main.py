@@ -36,6 +36,7 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
+    #Name case
     if ((message.text.find("your") != -1) and (message.text.find("name")) != -1):
         bot.send_message(message.chat.id, 'I\'m omniscient bot - the most clever bot on telegram!')
         return
