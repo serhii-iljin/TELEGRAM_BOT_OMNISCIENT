@@ -1,6 +1,6 @@
 import telebot
 import wolframalpha
-bot = telebot.TeleBot('1930969642:AAEH0CC-EYezvPVOvuM45OEg4_L8Wjproxo')
+bot = telebot.TeleBot('YOUR TOKEN HERE')
 
 @bot.message_handler(commands=['help'])
 def start_message(message):
