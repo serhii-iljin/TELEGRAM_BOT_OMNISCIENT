@@ -72,7 +72,7 @@ def send_text(message):
     else:
         q = message.text
     # Getting answer
-    client = wolframalpha.Client('7HXRW2-X5A2AXYYPY')
+    client = wolframalpha.Client('YOUR CLIENT ID HERE')
     res = client.query(q)
     try:
         bot.send_message(message.chat.id, (next(res.results).text))
