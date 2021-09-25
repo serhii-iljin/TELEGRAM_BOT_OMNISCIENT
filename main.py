@@ -16,7 +16,7 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-    client = wolframalpha.Client('7HXRW2-X5A2AXYYPY')
+    client = wolframalpha.Client('YOUR CLIENT ID HERE')
     res = client.query(message.text)
     try:
         bot.send_message(message.chat.id, (next(res.results).text))
