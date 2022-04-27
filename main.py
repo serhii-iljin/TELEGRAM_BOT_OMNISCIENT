@@ -22,7 +22,7 @@ def start_message(message):
 
 @bot.message_handler(commands=['examples', 'examplesOmn'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'General questions:\n-Temperature in Kherson?\n-Weather in kherson?\n-What is your name?\n\nMaths questions:\n-Solve x^5-x^3+3x^2-3=0\n-Integral x^2+ln(x)-1/x-32\n-Derivative x^3+sqrt(x)')
+    bot.send_message(message.chat.id, 'General questions:\n-Temperature in Kherson?\n-Weather in Kherson?\n-What is your name?\n\nMaths questions:\n-Solve x^5-x^3+3x^2-3=0\n-Integral x^2+ln(x)-1/x-32\n-Derivative x^3+sqrt(x)')
 
 
 @bot.message_handler(commands=['review', 'reviewOmn'])
@@ -35,7 +35,7 @@ def start_message(message):
     sendMessage = types.KeyboardButton('Send message')
     markup.add(dismiss)
     markup.add(sendMessage)
-    bot.send_message(message.chat.id, "Please, write your review with \"#\" at the beggining in the next message ans press \"Send message\" button or press \"Cancel\" to exit review writing mode",
+    bot.send_message(message.chat.id, "Please, write your review with \"#\" at the beggining in the next message and press enter with following \"Send message\" button or press \"Cancel\" to exit review writing mode",
                      reply_markup=markup)
 
 
