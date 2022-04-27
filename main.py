@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 import wolframalpha
 
-bot = telebot.TeleBot('1930969642:AAE_bGsOl_4OHlu-tk77nrqsEVm4r-a1kdg')
+bot = telebot.TeleBot('1930969642:AAE_bGsOl_4OHlu-tk77nrsEVm4r-a1kdg')
 
 
 @bot.message_handler(commands=['help', 'helpOmn'])
