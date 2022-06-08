@@ -50,19 +50,19 @@ def send_text(message):
         return
     # Review case
     if (message.text[0] == '#'):
-        bot.send_message(443610747, message.text)
-        bot.send_message(443610747, message.chat.id)
+        bot.send_message(YOUR_ID, message.text)
+        bot.send_message(YOUR_ID, message.chat.id)
         try:
-            bot.send_message(443610747, message.from_user.username)
+            bot.send_message(YOUR_ID, message.from_user.username)
         except:
             try:
-                bot.send_message(443610747, message.from_user.first_name)
+                bot.send_message(YOUR_ID, message.from_user.first_name)
                 try:
-                    bot.send_message(443610747, message.from_user.second_name)
+                    bot.send_message(YOUR_ID, message.from_user.second_name)
                 except:
-                    bot.send_message(443610747, "No second name\n")
+                    bot.send_message(YOUR_ID, "No second name\n")
             except:
-                bot.send_message(443610747, "No first name\n")
+                bot.send_message(YOUR_ID, "No first name\n")
         return
     # Determine bot behaviour depending on chat type
     if (message.text[0] != '!') and ((message.chat.type == 'supergroup') or (message.chat.type == 'group')):
