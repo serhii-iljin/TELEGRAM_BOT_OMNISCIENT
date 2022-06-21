@@ -2,7 +2,7 @@ import telebot
 from telebot import types
 import wolframalpha
 
-bot = telebot.TeleBot('1930969642:AAE_bGsOl_4OHlu-tk77nrqsEVm4r-a1kdg')
+bot = telebot.TeleBot('YOUR TOKEN HERE')
 
 
 @bot.message_handler(commands=['help', 'helpOmn'])
@@ -72,7 +72,7 @@ def send_text(message):
     else:
         q = message.text
     # Getting answer
-    client = wolframalpha.Client('7HXRW2-X5A2AXYYPY')
+    client = wolframalpha.Client('YOUR CLIENT ID HERE')
     res = client.query(q)
     try:
         bot.send_message(message.chat.id, (next(res.results).text))
