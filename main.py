@@ -1,6 +1,6 @@
 import telebot
 import wolframalpha
-bot = telebot.TeleBot('1930969642:AAEPwFm_FoBDaaXFt7UMcUxZa1QODli-yh4')
+bot = telebot.TeleBot('YOUR TOKEN HERE')
 
 @bot.message_handler(commands=['help'])
 def start_message(message):
@@ -24,7 +24,7 @@ def send_text(message):
     else:
         q = message.text
     #Getting answer
-    client = wolframalpha.Client('7HXRW2-X5A2AXYYPY')
+    client = wolframalpha.Client('YOUR CLIENT ID HERE')
     res = client.query(q)
     try:
         bot.send_message(message.chat.id, (next(res.results).text))
